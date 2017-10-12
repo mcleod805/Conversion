@@ -8,16 +8,41 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    color = request.args['color']
-    #The request object stores information about the request sent to the server.
-    #args is a multidict (like a dictionary but can have multiple values for the same key)
-    #the information in args is visible in the url for the page being requested
-    
-    if color == 'blue':
-        reply = "Thats my favorite color, too!"
-    else:
-        reply = "my favorite color is blue!!!"
+    time_convert_dict = {
+        WEEK: {DAY: Decimal('7')},
+    }
     return render_template('response1.html', response = reply)
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
+    
+    
+@app.route("/")
+def render_main():
+    return render_template('page2.html')
+
+@app.route("/response")
+def render_response():
+    time_convert_dict = {
+        DAY: {HRS: Decimal('24')},
+    }
+    return render_template('response2.html', response = reply)
+    
+if __name__=="__main__":
+    app.run(debug=False, port=54321)
+    
+    
+    @app.route("/")
+def render_main():
+    return render_template('page3.html')
+
+@app.route("/response")
+def render_response():
+    time_convert_dict = {
+        HRS: {MIN: Decimal('60')},
+    }
+    return render_template('response3.html', response = reply)
+    
+if __name__=="__main__":
+    app.run(debug=False, port=54321)
+
