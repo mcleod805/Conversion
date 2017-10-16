@@ -2,12 +2,12 @@ from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
-@app.route("/")
+@app.route("/page1")
 def render_main():
-    return render_template('home.html')
+    return render_template('page1.html')
 
-@app.route("/response")
-def render_response():
+@app.route("/response1")
+def render_response1():
     time_convert_dict = {
         WEEK: {DAY: Decimal('7')},
     }
@@ -17,7 +17,7 @@ if __name__=="__main__":
     app.run(debug=False, port=54321)
     
     
-@app.route("/page1")
+@app.route("/page2")
 def render_main():
     return render_template('page2.html')
 
