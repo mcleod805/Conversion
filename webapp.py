@@ -8,13 +8,12 @@ def render_main():
 
 @app.route("/response1")
 def render_response1():
-    time_convert_dict = {
-        WEEK: {DAY: Decimal('7')},
-    }
+        weeks = float(request.args['weeks']
+        reply = weeks * 7
+        return render_template('response1.html', response1 = reply)
     return render_template('response1.html', response = reply)
     
-if __name__=="__main__":
-    app.run(debug=False, port=54321)
+
     
     
 @app.route("/page2")
@@ -23,9 +22,9 @@ def render_page2():
 
 @app.route("/response2")
 def render_response2():
-    time_convert_dict = {
-        DAY: {HRS: Decimal('24')},
-    }
+   days = float(request.args['weeks']
+        reply = days * 24
+        return render_template('response2.html', response2 = reply)
     return render_template('response2.html', response = reply)
     
     
@@ -35,8 +34,10 @@ def render_page3():
 
 @app.route("/response3")
 def render_response3():
-    time_convert_dict = {
-        HRS: {MIN: Decimal('60')},
-    }
+    minutes = float(request.args['weeks']
+        reply = minutes * 60
+        return render_template('response3.html', response3 = reply)
     return render_template('response3.html', response = reply)
-
+                 
+if __name__=="__main__":
+    app.run(debug=False, port=54321)
