@@ -6,7 +6,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('home.html')
 
-@app.route("/response1.html")
+@app.route("/response1")
 def render_response1():
     weeks = float(request.args['weeks'])
     reply = weeks * 7
@@ -18,7 +18,7 @@ def render_page1():
 def render_page2():
     return render_template('page2.html')
 
-@app.route("/response2.html")
+@app.route("/response2")
 def render_response2():
     days = float(request.args['days'])
     reply = days * 24
@@ -29,7 +29,7 @@ def render_response2():
 def render_page3():
     return render_template('page3.html')
 
-@app.route("/response3.html")
+@app.route("/response3")
 def render_response3():
     minutes = float(request.args['minutes'])
     reply = minutes * 60
