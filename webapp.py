@@ -18,7 +18,7 @@ if __name__=="__main__":
     
     
 @app.route("/page2")
-def render_main():
+def render_page2():
     return render_template('page2.html')
 
 @app.route("/response2")
@@ -30,7 +30,7 @@ def render_response2():
     
     
 @app.route("/page3")
-def render_main():
+def render_page3():
     return render_template('page3.html')
 
 @app.route("/response3")
