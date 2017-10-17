@@ -16,7 +16,7 @@ def render_response1():
 
     
     
-@app.route("/page2")
+@app.route("/page2.html")
 def render_page2():
     return render_template('page2.html')
 
@@ -28,7 +28,7 @@ def render_response2():
     return render_template('response2.html', response = reply)
     
     
-@app.route("/page3")
+@app.route("/page3.html")
 def render_page3():
     return render_template('page3.html')
 
