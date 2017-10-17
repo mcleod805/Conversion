@@ -12,10 +12,9 @@ def render_response1():
         reply = weeks * 7
         return render_template('response1.html', response1 = reply)
     return render_template('response1.html', response = reply)
-    
-
-    
-    
+@app.route("/page1.html")
+def render_page1():
+    return render_template('page1.html')
 @app.route("/page2.html")
 def render_page2():
     return render_template('page2.html')
