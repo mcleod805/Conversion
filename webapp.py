@@ -8,7 +8,7 @@ def render_main():
 
 @app.route("/response1")
 def render_response1():
-        weeks = float(request.args['weeks']
+        weeks = float(request.args['weeks'])
         reply = weeks * 7
         return render_template('response1.html', response1 = reply)
 @app.route("/page1.html")
@@ -20,7 +20,7 @@ def render_page2():
 
 @app.route("/response2")
 def render_response2():
-   days = float(request.args['weeks']
+   days = float(request.args['days'])
         reply = days * 24
         return render_template('response2.html', response2 = reply)
     return render_template('response2.html', response = reply)
@@ -32,7 +32,7 @@ def render_page3():
 
 @app.route("/response3")
 def render_response3():
-    minutes = float(request.args['weeks']
+    minutes = float(request.args['minutes'])
         reply = minutes * 60
         return render_template('response3.html', response3 = reply)
     return render_template('response3.html', response = reply)
